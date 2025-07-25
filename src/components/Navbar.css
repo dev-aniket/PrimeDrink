@@ -1,0 +1,203 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav a {
+  margin-right: 20px;
+  color: white;
+  font-family: font2;
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.search-icon {
+  font-size: 18px;
+  margin-right: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-family: font2;
+  cursor: pointer;
+  line-height: 1.2;
+  white-space: normal;
+  text-align: right;
+  padding: 0 20px;
+  font-size: 0.75rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+
+/* Layout Sections */
+.nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-left {
+  flex: 1;
+}
+
+.nav-right {
+  flex: 1;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.nav.scrolled {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav.scrolled a,
+.nav.scrolled .logo,
+.nav.scrolled .search-icon,
+.nav.scrolled{
+  color: black;
+}
+
+.nav.scrolled .nav-button{
+  color: black;
+  height: 100%;
+  padding: 15px; /* Optional: keeps good spacing */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: black;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background-color: #040303;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 80px 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: font2;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    z-index: 1100;
+    justify-content: space-around;
+  }
+
+  .nav-left {
+    display: none;
+  }
+
+  .nav-center {
+    margin: 0 auto;
+  }
+
+   .nav-right {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    gap: 5px;
+  }
+
+  .search-icon {
+    margin-right: 0;
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  .nav-button {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
