@@ -1,6 +1,7 @@
 .home {
   position: relative;
   height: 100vh;
+  
   width: 100%;
   overflow: hidden;
   padding: 50px;
@@ -77,6 +78,10 @@
 
 /* ✅ Responsive - Mobile view */
 @media (max-width: 768px) {
+  .home{
+     padding-top: 40px;
+    padding-bottom: 40px;
+  }
   .home-content {
     align-items: center;
     text-align: center;

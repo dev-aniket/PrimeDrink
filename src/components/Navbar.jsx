@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
 
         <div className="nav-center">
-            <HashLink to="/" className="logo">
+            <HashLink to="/#" className="logo">
                <img src={logo} alt="Logo" className="logo-img" />
             </HashLink>
         </div>

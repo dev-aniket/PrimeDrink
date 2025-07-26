@@ -1,5 +1,6 @@
 .hydration-section {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background: white;
   text-align: center;
   padding: 60px 20px;
@@ -65,10 +66,22 @@ button{
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .products {
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: center;
+   .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+
+  .product {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hydration-section{
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .hydration-title {

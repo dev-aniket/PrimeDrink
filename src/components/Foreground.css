@@ -5,7 +5,7 @@
   gap: 40px;
   justify-content: space-around;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
   box-sizing: border-box;
   pointer-events: auto;
   position: relative;
@@ -46,8 +46,12 @@
 @media (max-width: 768px) {
   .foreground-container {
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
     gap: 30px;
+  }
+
+  .card{
+    margin-top: 50px;
   }
 
   .card-image {

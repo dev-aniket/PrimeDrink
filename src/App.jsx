@@ -19,8 +19,8 @@ const App = () => {
             <Navbar />
             <Home />
             <Wrapper />
-            <Product />
             <PrimeIce />
+            <Product />
             <Footer />
          </div>
     </>
